@@ -97,10 +97,6 @@ stage ('Deploy') {
   }
 
 post {
-    always {
-		when {
-        branch 'main'
-          }
       echo "Clean the work space after post build"
       cleanWs()
     }
