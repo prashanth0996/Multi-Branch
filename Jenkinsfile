@@ -92,4 +92,11 @@ stage ('Deploy') {
 
 
   }
+
+post {
+    always {
+      echo "Clean the work space after post build"
+      cleanWs()
+    }
+  }	
 }
