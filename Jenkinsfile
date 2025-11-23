@@ -66,6 +66,9 @@ stage('Upload to Artifactory') {
 
 
 stage ('Manual Approval' ) {
+	when {
+        branch 'main'
+          }
      options{ 
         timeout( time: 1 , unit: 'MINUTES') 
       }
